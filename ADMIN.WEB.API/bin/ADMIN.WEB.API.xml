@@ -1,0 +1,1655 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ADMIN.WEB.API</name>
+    </assembly>
+    <members>
+        <member name="M:ADMIN.WEB.API.Controllers.AddFileController.Get(System.String,System.Int32)">
+            <remarks>
+            첨부파일목록
+            
+                {
+                    "type" : "notice",
+                    "idx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminAssociationController.Get(System.String)">
+            <remarks>
+            협회 목록
+            
+                {
+                    "region" : 1, 
+                    "area" : 1,
+                    "option" : 0, [0:"전체" ,  1 : "회장명", 2 : "협회명"]
+                    "search" : "",
+                    "page" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminAssociationController.Get(System.Int32)">
+            <remarks>
+            협회 상세조회
+            
+                {
+                    "assIdx" : 1,
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminAssociationController.Post(ADMIN.WEB.API.Models.AdminAssociation)">
+            <remarks>
+            협회 등록
+            
+                {
+                    "region" : 1, 
+                    "area" : 1,
+                    "assName" : "",
+                    "memberIdx" : 5,
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminAssociationController.Patch(ADMIN.WEB.API.Models.AdminAssociation)">
+            <remarks>
+            협회 메모 등록
+            
+                {   
+                    "assIdx" : 3,
+                    "memo" : ""
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminBoardController.Get(System.String)">
+            <remarks>
+            체육관등록 요청 목록
+            
+                {
+                    "boardType" : "free",
+                    "option" : 0,  [0: 전체, 1 : "제목" , 2 : "작성자"]
+                    "search" : "",
+                    "page" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminClubController.Get(System.String)">
+            <remarks>
+            클럽 목록
+            
+                {
+                    "region" : 1, 
+                    "area" : 1,
+                    "option" : 0, [0:"전체" ,  1 : "클럽명", 2 : "회장명"]
+                    "search" : "",
+                    "page" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminClubController.Get(System.Int32)">
+            <remarks>
+            클럽상세정보
+            
+                {
+                   "clubIdx" : 1
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminClubController.Post(ADMIN.WEB.API.Models.AdminClub)">
+            <remarks>
+            클럽 메모(롸켓관리자사용)
+            
+                {
+                   "clubIdx" : 1,
+                   "memo" : ""
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminClubController.Delete(ADMIN.WEB.API.Models.AdminClub)">
+            <remarks>
+            클럽 폐쇄
+            
+                {
+                   "clubIdx" : 1
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminGradeController.Get(System.Int32)">
+            <remarks>
+            협회별 등급 리스트
+            
+                {
+                    "assIdx" : 1,
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminLoginController.Post(ADMIN.WEB.API.Models.Login)">
+            <remarks>
+            로그인
+            
+                {
+                    "id" : "statnco",
+                    "pw" : "a12345678"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminManageController.Get">
+            <remarks>
+            어드민 관리정보
+            
+                {
+                    
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminMemberController.Get(System.String)">
+            <remarks>
+            회원 목록
+            
+                {
+                    "block" : 0, [0 : 전체 , 1 : 차단]
+                    "option" : 0, [0:"전체" ,  1 : "이름", 2 : "핸드폰"]
+                    "search" : "",
+                    "page" : 1
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminMemberController.Get(System.Int32,System.Int32,System.Int32)">
+            <remarks>
+            회원 상세보기
+            
+                {
+                   "memberIdx" : 2
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminMemberController.Delete(ADMIN.WEB.API.Models.AdminMember)">
+            <remarks>
+            회원 탈퇴
+            
+                {
+                   "memberIdx" : 2,
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminMemberController.Post(ADMIN.WEB.API.Models.AdminMember)">
+            <remarks>
+            회원 개별 추가
+            
+                {
+                   "assIdx" : 1,
+                   "regionCode" : 2,
+                   "memberList" : [
+                        {
+                            "areaCode" : 1,
+                            "clubIdx": 4,
+                            "memberName" : "김팔도",
+                            "gender" : "M",
+                            "birth" : "19650423",
+                            "phone" : "01025537825",
+                            "regionClassCode" : 1,
+                            "areaClassCode" : 2
+                        }
+                    ]
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminSocialLoginController.Post(ADMIN.WEB.API.Models.AdminSocialLogin)">
+            <remarks>
+            로그인
+            
+                {
+                    "id" : "stadmin",
+                    "pw" : "a12345678"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminStadiumController.Get(System.String)">
+            <remarks>
+            체육관 목록
+            
+                {
+                    "option" : 0, [0:"전체" ,  1 : "시도", 2 : "시군구", 3: "체육관명" , 4: "주소", 5:"미등록"]
+                    "search" : "",
+                    "page" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminStadiumController.Get(System.Int32)">
+            <remarks>
+            체육관 상세정보
+            
+                {
+                    "stadiumIdx" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminStadiumController.Patch(ADMIN.WEB.API.Models.Stadium)">
+            <remarks>
+            체육관 수정
+            
+                {   
+                    "stadiumIdx" : 1,
+                    "regionCode" : 2,
+                    "areaCode" : 1,
+                    "type" : 2,
+                    "status" : 1,
+                    "stadiumName" : "test",
+                    "stadiumAddr" : "서울시 은평구 구산동",
+                    "stadiumAddr2" : "거북맨션 301호",
+                    "memo" : "",
+                    "phone" : "01012345676",
+                    "searchList": "h1, h2, h3, h4",
+                    "isUse" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AdminStadiumController.Post(ADMIN.WEB.API.Models.Stadium)">
+            <remarks>
+            체육관 등록
+            
+                {   
+                    "regionCode" : 2,
+                    "areaCode" : 1,
+                    "type" : 2,
+                    "status" : 1,
+                    "stadiumName" : "test",
+                    "stadiumAddr" : "서울시 은평구 구산동",
+                    "stadiumAddr2" : "거북맨션 301호",
+                    "memo" : "",
+                    "phone" : "01012345676",
+                    "searchList": "h1, h2, h3, h4",
+                    "isUse" : 1
+                    
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AllAdminMemberController.Get(System.String)">
+            <remarks>
+            임원진 등록시 검색
+            
+                {
+                    "assIdx" : 1,
+                    "option" : 1,[ 1 : 이름, 2 : 핸드폰]
+                    "search" : ""
+                }
+                 
+            </remarks> 
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AllClubMemberController.Get(System.String)">
+            <remarks>
+            전체회원 검색
+            
+                {
+                    "clubIdx" : 1,
+                    "option" : 1,[ 1 : 이름, 2 : 핸드폰]
+                    "search" : ""
+                }
+                 
+            </remarks> 
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AllMemberController.Get(System.String)">
+            <remarks>
+            전체회원 검색
+            
+                {
+                    "assIdx" : 1,
+                    "option" : 1,[ 1 : 이름, 2 : 핸드폰]
+                    "search" : ""
+                }
+                 
+            </remarks> 
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AreaClassController.Patch(ADMIN.WEB.API.Models.Classes)">
+            <remarks>
+            시군구 급수 수정
+            
+                {
+                    "assIdx" : 2,
+                    "areas" : [
+                        {"area" : 1 },
+                        {"area" : 2 },
+                        {"area" : 3 }
+                    ],
+                    "edits" : [
+                       {
+                        "stClass" : "A",
+                        "classCode" : 0,
+                        "className" : "다른감투꾼"
+                        },
+                    ]
+                    
+                }   
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AreaClassController.Get(System.String)">
+            <remarks>
+            시군구 급수 조회
+            
+                {
+                    "type" : 'club',   ['club', 'ass']
+                    "idx" : 1
+                }   
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminPositionController.Delete(ADMIN.WEB.API.Models.AssAdminPosition)">
+            <remarks>
+            협회별 직책 삭제
+            
+                {
+                   "assIdx" : 1,
+                    "poCode" : 1, 
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminPositionController.Patch(ADMIN.WEB.API.Models.AssAdminPosition)">
+            <remarks>
+            협회별 직책 수정
+            
+                {
+                   "assIdx" : 1,
+                    "poCode" : 1, 
+                    "position" : "무법감투꾼",
+                    "assManage" : 1,
+                    "noticeManage" : 1,
+                    "clubManage" : 1,
+                    "memberManage" : 1,
+                    "transferManage" : 0
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminPositionController.Post(ADMIN.WEB.API.Models.AssAdminPosition)">
+            <remarks>
+            협회별 직책 추가
+            
+                {
+                    "assIdx" : 1,
+                    "positions": [
+                       {
+                        "position" : "감투감투"    
+                       }
+                    ]
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminPositionController.Get(System.Int32)">
+            <remarks>
+            협회별 직책 리스트
+            
+                {
+                    "assIdx" : 1,
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAllMemberController.Get(System.String)">
+            <remarks>
+            협회의 회원 목록
+            
+                {   
+                      "assIdx" : 1,
+                      "region" : 1,
+                      "area" : 2,
+                      "option" : 0 ,  [ 0 : 전체, 1 : 클럽명 , 2:이름검색, 3:번호],
+                      "option2" : 1, [0 : 전체, 1 : 급수미인증회원만 검색]
+                      "search" : "",
+                      "page" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAllMemberController.Get(System.Int32,System.Int32,System.Int32)">
+            <remarks>
+            협회의 회원 상세조회
+            
+                {   
+                     "memberIdx" : 13
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAllMemberController.Patch(ADMIN.WEB.API.Models.AssAllMember)">
+            <remarks>
+            협회의 회원 수정
+            
+                {   
+                    "memberIdx" : 3,
+                    "clubIdx" : 6,
+                    "birth" : "19920925",
+                    "phone" : "01051216647",
+                    "gender" : "M",
+                    "assIdx" : "1",
+                    "regionClassCode": 1,
+                    "areaClassCode": 1,
+                    "reason": "시합에서 떨어져서 떨어짐",
+                    "dressCode" : 12,
+                    "shoesCode" : 11,
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssClubController.Get(System.Int32)">
+            <remarks>
+            협회소속 클럽 상세정보
+            
+                {   
+                     "clubIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssClubController.Get(System.String)">
+            <remarks>
+            협회소속 클럽 목록
+            
+                {   
+                      "assIdx" : 1,
+                      "option" : 1, [0 : 전체, 1:클럽명, 2:클럽회장, 3:체육관명]
+                      "search" : "",
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssClubController.Post(ADMIN.WEB.API.Models.AssClub)">
+            <remarks>
+            협회소속 클럽 등록
+            
+                {   
+                      "assIdx" : 1,
+                      "registList" : [
+                        {"clubIdx" : 2},
+                        {"clubIdx" : 5}
+                       ]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssClubController.Patch(ADMIN.WEB.API.Models.AssClub)">
+            <remarks>
+            협회소속 클럽 해제
+            
+                {   
+                      "assIdx" : 1,
+                      "clubIdx" : 2
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssClubSearchController.Get(System.String)">
+            <remarks>
+            클럽검색
+            
+                {
+                    "regionCode" : 1,
+                    "option" : 1, [0 : 전체, 1:클럽명, 2:클럽회장, 3:연락처]
+                    "search" : "",
+                    "areaCode" : 0  [ 0 : 전체, 1 > 각 지역번호]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssClubWaitController.Get(System.Int32)">
+            <remarks>
+            가입대기 클럽 조회
+            
+                {   
+                      "assIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssClubWaitController.Post(ADMIN.WEB.API.Models.AssClubWait)">
+            <remarks>
+            가입대기 클럽 상태 변경
+            
+                {   
+                      "assIdx" : 1,
+                      "clubIdx" : 2,
+                      "isOk" : 1,  [1: 승인, -1 : 거절]
+                      "reason" : "거절사유"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssMasterAssignController.Post(ADMIN.WEB.API.Models.AssMasterAssign)">
+            <remarks>
+            [롸켓어드민] 협회 회장 변경
+            
+                {
+                   "assIdx" : 1,
+                   "memberIdx" : 3
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssociationListController.Get(System.Int32)">
+            <remarks>
+            협회 리스트 조회
+            </remarks>
+            <returns>
+            </returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssociationMasterAssignController.Post(ADMIN.WEB.API.Models.AssMasterAssign)">
+            <remarks>
+            [협회어드민] 협회 회장 변경
+            
+                {
+                   "assIdx" : 1,
+                   "memberIdx" : 3
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssociationNameController.Get(System.String)">
+            <remarks>
+            협회명 중복체크
+            
+                {
+                    "region" : 1,
+                    "area" : 2,
+                    "assName" : "부산시 협회"
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssociationNameController.Get(System.Int32)">
+            <remarks>
+            협회명 반환
+            
+                {
+                    "assIdx" : 1,
+                   
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssociationSettingController.Get(System.Int32)">
+            <remarks>
+            협회 셋팅 정보
+            
+                {
+                  "assIdx" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssociationSettingController.Patch(ADMIN.WEB.API.Models.AssociationSetting)">
+            <remarks>
+            협회 셋팅 변경
+            
+                {
+                   "assIdx" : 1,
+                   "assName" : "변경용",
+                   "regionCode" : 2,
+                   "areaCode" : 1,
+                   "assType" : "A"
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssTransferController.Get(System.String)">
+            <remarks>
+            협회관리 이적리스트
+            
+                {
+                    "assIdx" : 1,
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssTransferController.Post(ADMIN.WEB.API.Models.AssTransfer)">
+            <remarks>
+            협회관리 이적 취소
+            
+                {
+                    "transIdx" : 2,
+                    "cancelReason" : "test",
+                    "assIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssTransferController.Get(System.Int32)">
+            <remarks>
+            협회관리 이적 상세보기
+            
+                {
+                    "transIdx" : 2
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.BelongClubController.Get(System.String)">
+            <remarks>
+            등록을 위한 클럽 조회(협회소속)
+            
+                {   
+                      "assIdx" : 1,
+                      "regionCode" : 2,
+                      "option" : 1, [0 : 전체, 1:클럽명, 2:클럽회장, 3:연락처]
+                      "search" : "",
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.BelongController.Get(System.String)">
+            <remarks>
+            협회소속 지역리스트 조회
+            
+                {   
+                      "assIdx" : 1,
+                      "regionCode" : 12
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClassController.Patch(ADMIN.WEB.API.Models.Classes)">
+            <remarks>
+            급수 수정
+            
+                {
+                    "assIdx" : 1,
+                    "edits" : [
+                    {
+                        "stClass" : "",
+                        "classCode" : 1,
+                        "className" : "무어라무어라"
+                        
+                    } 
+                   ]
+                }   
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClassController.Get(System.String)">
+            <remarks>
+            급수조회
+            
+                {
+                    "type" : "club", [club, ass]
+                    "idx" : 1
+                }   
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubAssignController.Post(ADMIN.WEB.API.Models.ClubAssign)">
+            <remarks>
+            클럽장 양도
+            
+                {
+                   "clubIdx" : 1,
+                   "memberIdx" : 3
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubController.Get(System.String)">
+            <remarks>
+            클럽상세정보
+            
+                {
+                    "clubIdx" : 2,
+                    "regionCode" : 1,
+                    "areaCode" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubController.Get(System.Int32)">
+            <remarks>
+            클럽상세정보
+            
+                {
+                    "id" : 1384
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubController.Put(ADMIN.WEB.API.Models.Clubs)">
+            <remarks>
+            클럽정보수정 
+            
+                {       
+                      "clubIdx" : 1,
+                      "clubName": "클럽이름",
+                      "stadiumIdx": 1,
+                      "memo": "클럽설명",
+                      "images": [
+                        {   
+                            "fileName": "images.jpg",
+                            "filePath": "/uploads/temp_image/"
+                        },
+                        {
+                            "fileName": "dddddd.png",
+                            "filePath": "/uploads/temp_image/"
+                        }
+                       ]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubInfoController.Get(System.Int32)">
+            <remarks>
+            관리목록
+            
+                {
+                    "id" : 1384
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberController.Get(System.Int32)">
+            <remarks>
+            클럽멤버리스트
+            
+                {
+                    "clubIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberController.Post(ADMIN.WEB.API.Models.ClubMembers)">
+            <remarks>
+            클럽멤버 추가
+            
+                {
+                    
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberController.Put(ADMIN.WEB.API.Models.ClubMembers.EditMember)">
+            <remarks>
+            클럽멤버수정
+            
+                {
+                    "memberIdx" : 1, 
+                    "clubIdx": 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberController.Get(System.Int32,System.Int32)">
+            <remarks>
+            클럽멤버상세조회
+            
+                {
+                    "id" : 0,
+                    "clubIdx": 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberGradeController.GetClubMemberGradeList">
+            <remarks>
+            클럽 회원 등급 리스트 조회
+            
+                {
+                    
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberWaitController.Get(System.Int32)">
+            <remarks>
+            클럽가입대기멤버리스트
+            클럽 id
+                {
+                    "id" : 0
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberWaitController.Post(ADMIN.WEB.API.Models.ClubMemberWait)">
+            <remarks>
+            클럽가입대기멤버승인 [대기id = waitIdx]
+            
+                {
+                    "waitIdx" : 0,
+                    "optionCode" : 0,
+                    "isAccept" : true
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubMemberWaitController.Put(ADMIN.WEB.API.Models.ClubMemberWait)">
+            <remarks>
+            클럽가입대기멤버거부 [대기id = waitIdx]
+            
+                {
+                    "waitIdx" : 0,
+                    "rejectReason" : "가입 거부의 사유가 들어갑니다",
+                    "isAccept" : true
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminMemberController.Post(ADMIN.WEB.API.Models.AssAdminMember)">
+            <remarks>
+            관리자등록
+            
+                {
+                    "assIdx" : 1,
+                    "memberIdx" : 1
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminMemberController.Delete(ADMIN.WEB.API.Models.AssAdminMember)">
+            <remarks>
+            관리자 해제
+            
+                {
+                   "assIdx" : 1,
+                   "delList" : [
+                        {
+                          "memberIdx" : 2
+                         },
+                    ]
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminMemberController.Get(System.String)">
+            <remarks>
+            관리자 리스트
+            
+                {
+                    "assIdx" : 1,
+                    "option" : 1, [0 : 전체, 1 : 이름, 2 : 핸드폰]
+                    "search" : ""
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminMemberController.Get(System.Int32,System.Int32)">
+            <remarks>
+            관리정보 상세조회
+            
+                {
+                    "assIdx" : 1,
+                    "memberIdx" : 1
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.AssAdminMemberController.Patch(ADMIN.WEB.API.Models.AssAdminMember)">
+            <remarks>
+            관리자 수정
+            
+                {
+                    "assIdx" : 1,
+                    "memberIdx" : 1,
+                    "poCode" : 2
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubNameController.Get(System.Int32)">
+            <remarks>
+            클럽명 변경 상세정보
+            
+                {
+                   "editIdx" : 1
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubNameController.Get(System.String)">
+            <remarks>
+            클럽명 변경 요청 목록
+            
+                {
+                   "assIdx" : 1
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubNameController.Post(ADMIN.WEB.API.Models.ClubName)">
+            <remarks>
+            클럽명 변경 신청
+            
+                {
+                    "clubIdx" : 2,
+                    "befClubName" : "a",
+                    "aftClubName" : "B"
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubNameController.Patch(ADMIN.WEB.API.Models.ClubName)">
+            <remarks>
+            클럽명 변경 승인/거절 
+            
+                {
+                    "editIdx" : 1,
+                    "isOk" : 1  
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ClubNameDuplicateController.Get(System.String)">
+            <remarks>
+            클럽명 중복체크
+            
+                {
+                    "region" : 1,
+                    "area" : 2,
+                    "clubName" : "센텀파워"
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExcelUpload.BelongClubListController.Get(System.String)">
+            <remarks>
+            협회소속 클럽 목록
+            
+                {   
+                      "region" : 1,
+                      "area" : 2,
+                      "assIdx" : 2
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExcelUpload.ExcelClubAddController.Post(ADMIN.WEB.API.Models.ExcelClubAdd)">
+            <remarks>
+            엑셀 클럽 추가
+            
+                {   
+                      "assIdx" : 2,
+                      "clubList" : [
+                        {
+                         "region" : "대구",
+                         "area" : "동구",
+                         "clubName" : "너무하고싶어",
+                         },
+                         {
+                         "region" : "부산",
+                         "area" : "영도구",
+                         "clubName" : "DDNS배드민턴",
+                         },
+                        
+                    ]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExcelUpload.ExcelMemberAddController.Post(ADMIN.WEB.API.Models.ExcelMemberAdd)">
+            <remarks>
+            엑셀 회원 추가
+            
+                {   
+                      "assType" : 1,
+                      "memberList" : [
+                        {
+                         "clubIdx" : 2,
+                         "memberName" : "김배드민턴",
+                         "gender" : "M",
+                         "birth" : "19920405",
+                         "phone" : "01023631042",
+                         "classCode" : "A",
+                         },
+                         {
+                         "clubIdx" : 2,
+                         "memberName" : "김배도민턴",
+                         "gender" : "M",
+                         "birth" : "19920205",
+                         "phone" : "01023631042",
+                         "classCode" : "B"
+                         }
+                    ]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.Compare.ClassCompareController.Post(ADMIN.WEB.API.Models.ClassCompare)">
+            <remarks>
+            급수 비교
+            
+                {   
+                      "assType" : 1,
+                      "checkList" : [
+                        {
+                         "clubIdx" : 2,
+                         "memberIdx" : 13,
+                         "classCode" : "B"
+                         },
+                         {
+                         "clubIdx" : 2,
+                         "memberIdx" : 15,
+                         "classCode" : "B"
+                         }      
+                    ]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.DressController.Get">
+            <remarks>
+            옷사이즈조회
+            
+                {
+                    
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExcelController.Get(System.String)">
+            <remarks>
+            협회 급수비교 양식 다운로드
+            
+                {
+                    "type" : "notice",
+                    "idx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExpulsionController.Post(ADMIN.WEB.API.Models.Expulsion)">
+            <remarks>
+            제명 신청
+            
+                {   
+                    "type" : "club", 
+                    "idx" : 1,
+                    "memberIdx" : 1,
+                    "srtDate" : "2022-07-28",
+                    "endDate" : "2022-07-28",
+                    "expReason" : "제명의 이유는 제4조 5항과 같다"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExpulsionController.Get(System.String)">
+            <remarks>
+            제명 내용 조회
+            
+                {   
+                    "type" : 'club', 
+                    "idx" : 1,
+                    "memberIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExpulsionController.Put(ADMIN.WEB.API.Models.Expulsion)">
+            <remarks>
+            제명 수정
+            
+                {   
+                    "expIdx" : 1, 
+                    "srtDate" : "2022-07-28",
+                    "endDate" : "2022-07-28",
+                    "isExp" : true,
+                    "expReason" : "제명의 이유는 제4조 5항과 같다"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ExpulsionController.Delete(ADMIN.WEB.API.Models.Expulsion)">
+            <remarks>
+            제명 취소
+            
+                {   
+                    "expIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.LoginController.Post(ADMIN.WEB.API.Models.Login)">
+            <remarks>
+            로그인
+            
+                {
+                    "id" : "stadmin",
+                    "pw" : "a12345678"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ManageController.Get">
+            <remarks>
+            관리목록
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ManageController.Post(ADMIN.WEB.API.Models.Manage)">
+            <remarks>
+            관리정보
+            
+                {
+                    "type" : "ass", or "club"
+                    "idx" : 1  idx번호
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.MemberBlockController.Post(ADMIN.WEB.API.Models.MemberBlock)">
+            <remarks>
+            회원 차단설정
+            
+                {
+                   "memberIdx" : 2,
+                   "type" : 1, [ 1: 3일, 2 : 7일 , 3 : 30일 , 4 : 영구차단],
+                   "start" : "2022-09-20",
+                   "end" : "2022-09-23",
+                   "memo" : ""
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.MemberBlockController.Patch(ADMIN.WEB.API.Models.MemberBlock)">
+            <remarks>
+            차단 변경
+            
+                {
+                   "memberIdx" : 2,
+                   "type" : 1, [0 : 취소, 1: 3일, 2 : 7일 , 3 : 30일 , 4 : 영구차단],
+                   "start" : "2022-09-20",
+                   "end" : "2022-09-23",
+                   "memo" : ""
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.MemberClassAuthController.Post(ADMIN.WEB.API.Models.MemberClassAuth)">
+            <remarks>
+            회원 급수 인증
+            
+                {   
+                     "assIdx" : 1,
+                     "classList" : [
+                        {
+                            "clubIdx" : 3,
+                            "memberIdx" : 5
+                        }
+                    ]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.MembersClassesController.Post(ADMIN.WEB.API.Models.MembersClasses)">
+            <remarks>
+            멤버 급수 일괄변경
+            
+                {
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.MembersClassesController.Get(System.String)">
+            <remarks>
+            멤버 급수 조회
+            
+                {
+                    "assIdx" : 1,
+                    "region" : 2,
+                    "area" : 2,
+                    "option" : 0 , [0 : 전체, 1 : 클럽명 , 2: 이름]
+                    "search" : ""
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.MembersClassesController.Patch(ADMIN.WEB.API.Models.EditMemberClass)">
+            <remarks>
+            멤버 급수 수정
+            
+                {
+                    "assIdx" : 1,
+                    "assType" : 1,
+                    "reason" : "사,유",
+                    "classesList" : [
+                        {
+                            "clubIdx" : 1,
+                            "memberIdx" : 256,
+                            "classCode" : 20
+                        }
+                    ]
+                   
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.NewExcelController.Get(System.String)">
+            <remarks>
+            협회 급수비교 양식 다운로드
+            
+                {
+                    "type" : "class",
+                    "assType" : 1,
+                    "semitype": "club", 
+                    "idx" : 2
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.NoticeController.Get(System.Int32)">
+            <remarks>
+            공지사항 상세조회
+            
+                {
+                    "noticeIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.NoticeController.Get(System.String)">
+            <remarks>
+            공지사항 리스트
+            
+                {
+                    "assIdx" : 1,
+                    "division" : "region", (region, area, club)
+                    "type" : "전체",  (전체, 작성자, 제목)
+                    "search" : "",
+                    "page" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.NoticeController.Post(ADMIN.WEB.API.Models.Notice)">
+            <remarks>
+            공지사항 등록
+            
+                {
+                      "assIdx" : 1,
+                      "title": "공지사항 업로드 테스트",
+                      "contents": "파일 업로드 테스트 시작",
+                      "isAll" : 0,
+                      "isRegion" : 1,
+                      "isArea" : 1,
+                      "isClub" : 1,
+                       "files" : [
+                       {
+                            "no" : 0
+                            "fileName" : "",
+                            "filePath" : "/uploads/temp_image/"
+                       }
+                      ]
+                }
+                
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.NoticeController.Patch(ADMIN.WEB.API.Models.Notice)">
+            <remarks>
+            공지사항 수정
+            
+                {   
+                      "noticeIdx" : 1,
+                      "title": "공지사항 업로드 테스트",
+                      "contents": "파일 업로드 테스트 시작",
+                       "editFiles" : [
+                       {
+                            "no" : 1,
+                            "fileName" : "",
+                            "filePath" : "/uploads/temp_image/"
+                       }
+                      ]
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.NoticeController.Delete(System.Int32)">
+            <remarks>
+            공지사항 삭제
+            
+                {   
+                      "noticeIdx" : 1,
+                }
+                
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ReplyController.Get(System.Int32)">
+            <remarks>
+            댓글 조회
+            
+                {
+                   "공지글Idx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ReplyController.Post(ADMIN.WEB.API.Models.Reply)">
+            <remarks>
+            댓글 작성
+            
+                {
+                   "noticeIdx" : 1,
+                   "repIdx" : 0,
+                   "depth" : 0,
+                   "contents" : "어쩌구저쩌구",
+                   "fileName" : "",
+                   "filePath" : ""
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ReplyController.Put(ADMIN.WEB.API.Models.Reply)">
+            <remarks>
+            댓글 수정
+            
+                {
+                   "noticeIdx" : 1,
+                   "writer" : 1,
+                   "repIdx" : 0,
+                   "contents" : "어쩌구저쩌구",
+                   "fileName" : "",
+                   "filePath" : ""
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ReplyController.delete(ADMIN.WEB.API.Models.DelReply)">
+            <remarks>
+            댓글 삭제
+            
+                {
+                   "repIdx" : 1,
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.ShoesController.Get">
+            <remarks>
+            신발사이즈조회
+            
+                {
+                    
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.StadiumRequestController.Get(System.String)">
+            <remarks>
+            체육관등록 요청 목록
+            
+                {
+                    "option" : 0, [0:"전체" ,  1 : "체육관명", 2 : "요청자"]
+                    "search" : "",
+                    "page" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.StadiumRequestController.Get(System.Int32)">
+            <remarks>
+            체육관 요청 상세정보
+            
+                {
+                    "requestIdx" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.StadiumRequestController.Post(ADMIN.WEB.API.Models.StadiumRequest)">
+            <remarks>
+            체육관 요청 처리
+            
+                {
+                    "requestIdx" : 1,
+                    "regionCode" : 1, 
+                    "areaCode" : 2,
+                    "type" : 1,
+                    "status" : 2,
+                    "stadiumName" : "test1234",
+                    "stadiumAddr" : "서울시 은평구",
+                    "stadiumAddr2" : "aaaaaaa",
+                    "phone" : "01015123452",
+                    "searchList" : "12g, 5u3,  glk34",
+                    "isUse" : 1
+                }
+                  
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.StatdiumController.Get(System.String)">
+            <remarks>
+            체육관 조회
+            
+                {
+                   "regionCode" : 1,
+                   "areaCode" : 1,
+                   "search" : "부산"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.StatdiumController.Post(ADMIN.WEB.API.Models.Stadium)">
+            <remarks>
+            체육관 요청
+            
+                {
+                   "regionCode" : 1,
+                   "areaCode" : 1,
+                   "stadiumName" : "원피스",
+                   "clubIdx" : 1
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.TempMemberController.Post(ADMIN.WEB.API.Models.TempMember)">
+            <remarks>
+            임시회원 체크(네이버 : N, 카카오 : K,  구글 : G , 애플 : A)
+            
+                {
+                    "id" : "GX6bigpK5V_cYaVfEQx4uhvjJbaPlDmewUGhClG9aEk",
+                    "type" : "N"                                        
+                }
+            </remarks>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.TransferController.Get(System.String)">
+            <remarks>
+            이적리스트
+            
+                {
+                    "clubIdx" : 1,
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.TransferController.Get(System.Int32)">
+            <remarks>
+            이적상세조회
+            
+                {
+                    "transIdx" : 1,
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.TransferController.Post(ADMIN.WEB.API.Models.Transfer)">
+            <remarks>
+            이적신청
+            
+                {
+                    "memberIdx":1,
+                    "befRegionCode" : 1,
+                    "befAreaCode" : 2,
+                    "clubIdx" : 1,
+                    "aftRegionCode" : 2,
+                    "aftAreaCode" : 3,
+                    "tClubIdx" : 2,
+                    "fileName" : "이적신청서.jpg",
+                    "filePath" : "/uploads/temp_image/",
+                    "reason" : "사유사유"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.TransferController.Put(ADMIN.WEB.API.Models.Transfer)">
+            <remarks>
+            이적 승인/거절/취소
+            
+                {
+                    "transIdx" : 1,   
+                    "isOk" : 1 (0 : 대기, 1:승인, -1 :거절 , 2 : 보류)
+                    "editReason" : "그냥마음에 안들어서"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.UnsignMemberController.Get(System.String)">
+            <remarks>
+            미가입회원등록시 중복확인
+            
+                {
+                    "clubIdx" : 1,
+                    "memberName" : "김아무개",
+                    "gender" : "M",
+                    "birth" : "19920925"
+                }
+                 
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:ADMIN.WEB.API.Controllers.UploadController.Post">
+            <remarks>
+            파일업로드 입니다.
+            </remarks>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
